@@ -22,7 +22,8 @@ public class SolutionTest {
 
         List<List<Integer>> actual = new Solution().threeSum(input);
         assertEquals(expected.size(), actual.size());
-        assertThat(actual, containsInAnyOrder(Arrays.asList(-1, 0, 1), Arrays.asList(-1, -1, 2)));
+        //assertThat(actual, containsInAnyOrder(Arrays.asList(-1, 0, 1), Arrays.asList(-1, -1, 2)));
+        assertThat(actual, containsInAnyOrder(expected.toArray()));
     }
 
     @Test
@@ -34,7 +35,7 @@ public class SolutionTest {
 
         List<List<Integer>> actual = new Solution().threeSum(input);
         assertEquals(expected.size(), actual.size());
-        assertThat(actual, containsInAnyOrder(Arrays.asList(-1, 0, 1)));
+        assertThat(actual, containsInAnyOrder(expected.toArray()));
     }
 
     @Test
@@ -46,6 +47,6 @@ public class SolutionTest {
 
         List<List<Integer>> actual = new Solution().threeSum(input);
         assertEquals(expected.size(), actual.size());
-        assertThat(actual, containsInAnyOrder(Arrays.asList(0, 0, 0)));
+        assertThat(actual, containsInAnyOrder(expected.toArray()));
     }
 }
