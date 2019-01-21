@@ -23,7 +23,7 @@ public class Solution {
         map.put('9', asList("w", "x", "y", "z"));
     }
 
-    public List<String> letterCombinations(String digits) {
+    public List<String> letterCombinations2(String digits) {
         LinkedList<String> result = new LinkedList<>();
         if (digits == null || digits.trim().isEmpty()) {
             return result;
@@ -45,6 +45,23 @@ public class Solution {
                 for (String val : vals) {
                     result.add(combination + val);
                 }
+            }
+        }
+        return result;
+    }
+
+    public List<String> letterCombinations(String digits) {
+        LinkedList<String> result = new LinkedList<>();
+        if (digits == null || digits.trim().isEmpty()) {
+            return result;
+        }
+        String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        result.add("");
+        while (result.peek().length() != digits.length()) {
+            String val = result.remove();
+            String map = mapping[digits.charAt(val.length()) - '0'];
+            for (char c : map.toCharArray()) {
+                result.addLast(val + c);
             }
         }
         return result;

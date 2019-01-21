@@ -1,14 +1,15 @@
 package com.leetcode.problem17;
 
+import org.hamcrest.collection.IsIterableContainingInAnyOrder;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.hasSize;
 
 public class SolutionTest {
 
@@ -16,14 +17,21 @@ public class SolutionTest {
     public void emptyList() {
         String input = "";
         List<String> actual = new Solution().letterCombinations(input);
-        assertTrue(actual.isEmpty());
+        assertThat(actual, is(empty()));
     }
 
     @Test
     public void emptyListFor1() {
         String input = "1";
         List<String> actual = new Solution().letterCombinations(input);
-        assertTrue(actual.isEmpty());
+        assertThat(actual, is(empty()));
+    }
+
+    @Test
+    public void emptyListFor190() {
+        String input = "190";
+        List<String> actual = new Solution().letterCombinations(input);
+        assertThat(actual, is(empty()));
     }
 
     @Test
@@ -32,7 +40,7 @@ public class SolutionTest {
         List<String> expected = Arrays.asList("a", "b", "c");
         List<String> actual = new Solution().letterCombinations(input);
         assertThat(actual, hasSize(expected.size()));
-        assertThat(actual.toArray(), arrayContainingInAnyOrder(expected.toArray()));
+        assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 
     @Test
@@ -41,6 +49,6 @@ public class SolutionTest {
         List<String> expected = Arrays.asList("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf");
         List<String> actual = new Solution().letterCombinations(input);
         assertThat(actual, hasSize(expected.size()));
-        assertThat(actual.toArray(), arrayContainingInAnyOrder(expected.toArray()));
+        assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 }
