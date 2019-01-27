@@ -21,20 +21,6 @@ public class SolutionTest {
     }
 
     @Test
-    public void emptyListFor1() {
-        String input = "1";
-        List<String> actual = new Solution().letterCombinations(input);
-        assertThat(actual, is(empty()));
-    }
-
-    @Test
-    public void emptyListFor190() {
-        String input = "190";
-        List<String> actual = new Solution().letterCombinations(input);
-        assertThat(actual, is(empty()));
-    }
-
-    @Test
     public void oneDigit() {
         String input = "2";
         List<String> expected = Arrays.asList("a", "b", "c");
