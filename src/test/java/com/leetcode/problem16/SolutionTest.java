@@ -1,13 +1,15 @@
 package com.leetcode.problem16;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SolutionTest {
+@DisplayName("3Sum Closest")
+class SolutionTest {
 
     @Test
-    public void threeSumClosest() {
+    void threeSumClosest() {
         int[] nums = new int[]{-1, 2, 1, -4};
         int target = 1;
         int expected = 2;

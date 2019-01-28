@@ -1,13 +1,15 @@
 package com.leetcode.problem7;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SolutionTest {
+@DisplayName("Reverse Integer")
+class SolutionTest {
 
     @Test
-    public void reversePositive() {
+    void reversePositive() {
         int input = 123;
         int expected = 321;
         int actual = new Solution().reverse(input);
@@ -15,7 +17,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void reverseNegative() {
+    void reverseNegative() {
         int input = -123;
         int expected = -321;
         int actual = new Solution().reverse(input);
@@ -23,7 +25,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void noLeadingZero() {
+    void noLeadingZero() {
         int input = 120;
         int expected = 21;
         int actual = new Solution().reverse(input);
@@ -31,7 +33,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void overflow() {
+    void overflow() {
         int input = Integer.MAX_VALUE;
         int expected = 0;
         int actual = new Solution().reverse(input);

@@ -1,13 +1,15 @@
 package com.leetcode.problem8;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SolutionTest {
+@DisplayName("String to Integer (atoi)")
+class SolutionTest {
 
     @Test
-    public void simpleConvert() {
+    void simpleConvert() {
         String input = "42";
         int expected = 42;
         int actual = new Solution().myAtoi(input);
@@ -15,7 +17,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void simpleConvertWithSign() {
+    void simpleConvertWithSign() {
         String input = "+1";
         int expected = 1;
         int actual = new Solution().myAtoi(input);
@@ -23,7 +25,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void simpleConvertWithTwoSigns() {
+    void simpleConvertWithTwoSigns() {
         String input = "+-2";
         int expected = 0;
         int actual = new Solution().myAtoi(input);
@@ -31,7 +33,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void simpleConvertWithSigns() {
+    void simpleConvertWithSigns() {
         String input = "++1";
         int expected = 0;
         int actual = new Solution().myAtoi(input);
@@ -39,7 +41,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void negativeWithWhitespaces() {
+    void negativeWithWhitespaces() {
         String input = "   -42";
         int expected = -42;
         int actual = new Solution().myAtoi(input);
@@ -47,7 +49,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void numberWithWords() {
+    void numberWithWords() {
         String input = "4193 with words";
         int expected = 4193;
         int actual = new Solution().myAtoi(input);
@@ -55,7 +57,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void wordsWithNumber() {
+    void wordsWithNumber() {
         String input = "words and 987";
         int expected = 0;
         int actual = new Solution().myAtoi(input);
@@ -63,7 +65,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void overflow() {
+    void overflow() {
         String input = "-91283472332";
         int expected = Integer.MIN_VALUE;
         int actual = new Solution().myAtoi(input);
@@ -71,7 +73,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void overflow2() {
+    void overflow2() {
         String input = "-2147483647";
         int expected = -2147483647;
         int actual = new Solution().myAtoi(input);
@@ -79,7 +81,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void combination() {
+    void combination() {
         String input = "  -0012a42";
         int expected = -12;
         int actual = new Solution().myAtoi(input);
@@ -87,7 +89,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void combination2() {
+    void combination2() {
         String input = "   +0 123";
         int expected = 0;
         int actual = new Solution().myAtoi(input);
@@ -95,7 +97,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void combination3() {
+    void combination3() {
         String input = "-   234";
         int expected = 0;
         int actual = new Solution().myAtoi(input);
@@ -103,7 +105,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void combination4() {
+    void combination4() {
         String input = "0-1";
         int expected = 0;
         int actual = new Solution().myAtoi(input);
@@ -111,7 +113,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void combination5() {
+    void combination5() {
         String input = "-5-";
         int expected = -5;
         int actual = new Solution().myAtoi(input);

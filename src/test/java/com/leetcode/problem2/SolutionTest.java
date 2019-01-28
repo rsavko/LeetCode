@@ -1,13 +1,16 @@
 package com.leetcode.problem2;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@DisplayName("Add Two Numbers")
 public class SolutionTest {
 
     @Test
-    public void addTwoNumbers() {
+    void addTwoNumbers() {
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
         l1.next.next = new ListNode(3);

@@ -1,7 +1,8 @@
 package com.leetcode.problem22;
 
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,10 +10,11 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 
-public class SolutionTest {
+@DisplayName("Generate Parentheses")
+class SolutionTest {
 
     @Test
-    public void generateParenthesis() {
+    void generateParenthesis() {
         int input = 3;
         List<String> expected = Arrays.asList("((()))", "(()())", "(())()", "()(())", "()()()");
         List<String> actual = new Solution().generateParenthesis(input);

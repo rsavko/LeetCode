@@ -1,13 +1,15 @@
 package com.leetcode.problem11;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SolutionTest {
+@DisplayName("Container With Most Water")
+class SolutionTest {
 
     @Test
-    public void maxArea() {
+    void maxArea() {
         int[] input = new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7};
         int expected = 49;
         int actual = new Solution().maxArea(input);
@@ -15,7 +17,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void maxArea2() {
+    void maxArea2() {
         int[] input = new int[]{1, 1, 1};
         int expected = 2;
         int actual = new Solution().maxArea(input);

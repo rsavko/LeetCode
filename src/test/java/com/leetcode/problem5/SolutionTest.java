@@ -1,13 +1,15 @@
 package com.leetcode.problem5;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SolutionTest {
+@DisplayName("Longest Palindromic Substring")
+class SolutionTest {
 
     @Test
-    public void longestPalindrome() {
+    void longestPalindrome() {
         String input = "babad";
         String expected = "bab";
 
@@ -16,7 +18,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void longestPalindrome2() {
+    void longestPalindrome2() {
         String input = "cbbd";
         String expected = "bb";
 
@@ -25,7 +27,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void longestPalindrome3() {
+    void longestPalindrome3() {
         String input = "babcd";
         String expected = "bab";
 
@@ -34,7 +36,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void oneElement() {
+    void oneElement() {
         String input = "a";
         String expected = "a";
 

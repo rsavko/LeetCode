@@ -1,6 +1,8 @@
 package com.leetcode.problem15;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,12 +10,13 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SolutionTest {
+@DisplayName("3Sum")
+class SolutionTest {
 
     @Test
-    public void threeSum() {
+    void threeSum() {
         int[] input = new int[]{-1, 0, 1, 2, -1, -4};
 
         List<List<Integer>> expected = new ArrayList<>();
@@ -27,7 +30,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void threeSumUniqueInput() {
+    void threeSumUniqueInput() {
         int[] input = new int[]{-1, 0, 1, 1, -1, 0};
 
         List<List<Integer>> expected = new ArrayList<>();
@@ -39,7 +42,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void threeSumSameInput() {
+    void threeSumSameInput() {
         int[] input = new int[]{0, 0, 0};
 
         List<List<Integer>> expected = new ArrayList<>();

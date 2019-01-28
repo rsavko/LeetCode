@@ -1,13 +1,15 @@
 package com.leetcode.problem6;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SolutionTest {
+@DisplayName("ZigZag Conversion")
+class SolutionTest {
 
     @Test
-    public void with3Rows() {
+    void with3Rows() {
         String input = "PAYPALISHIRING";
         int numRows = 3;
         String expected = "PAHNAPLSIIGYIR";
@@ -16,7 +18,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void with4Rows() {
+    void with4Rows() {
         String input = "PAYPALISHIRING";
         int numRows = 4;
         String expected = "PINALSIGYAHRPI";
@@ -25,7 +27,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void with1Rows() {
+    void with1Rows() {
         String input = "AB";
         int numRows = 1;
         String expected = "AB";

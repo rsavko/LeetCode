@@ -1,14 +1,16 @@
 package com.leetcode.problem1;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class SolutionTest {
+@DisplayName("Two Sum")
+class SolutionTest {
 
     @Test
-    public void targetExists() {
+    void targetExists() {
         int[] nums = new int[]{2, 7, 11, 15};
         int target = 9;
         int[] expected = new int[]{0, 1};
@@ -16,11 +18,11 @@ public class SolutionTest {
         Solution solution = new Solution();
         int[] actual = solution.twoSum(nums, target);
 
-        assertArrayEquals("Expected result is different", expected, actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void targetExists2() {
+    void targetExists2() {
         int[] nums = new int[]{2, 7, 11, 15};
         int target = 17;
         int[] expected = new int[]{0, 3};
@@ -28,17 +30,16 @@ public class SolutionTest {
         Solution solution = new Solution();
         int[] actual = solution.twoSum(nums, target);
 
-        assertArrayEquals("Expected result is different", expected, actual);
+        assertArrayEquals(expected, actual);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void targetNotExists() {
+    @Test
+    @DisplayName("Throw exception if provided target not exists")
+    void targetNotExists() {
         int[] nums = new int[]{2, 7, 11, 15};
         int target = 8;
 
-        Solution solution = new Solution();
-        solution.twoSum(nums, target);
+        assertThrows(IllegalArgumentException.class, () -> new Solution().twoSum(nums, target));
 
-        fail("Should throw exception");
     }
 }

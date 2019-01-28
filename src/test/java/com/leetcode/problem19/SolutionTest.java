@@ -1,7 +1,9 @@
 package com.leetcode.problem19;
 
-import org.junit.Ignore;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,10 +12,11 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-public class SolutionTest {
+@DisplayName("Remove Nth Node From End of List")
+class SolutionTest {
 
     @Test
-    public void removeNthFromEnd() {
+    void removeNthFromEnd() {
         ListNode input = new ListNode(1);
         input.next = new ListNode(2);
         input.next.next = new ListNode(3);
@@ -39,7 +42,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void remove1stFromEnd() {
+    void remove1stFromEnd() {
         ListNode input = new ListNode(1);
         input.next = new ListNode(2);
         input.next.next = new ListNode(3);
@@ -62,7 +65,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void remove5thFromEnd() {
+    void remove5thFromEnd() {
         ListNode input = new ListNode(1);
         input.next = new ListNode(2);
         input.next.next = new ListNode(3);
@@ -85,7 +88,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void remove1thFromEnd_listOf1Element() {
+    void remove1thFromEnd_listOf1Element() {
         ListNode input = new ListNode(1);
 
         ListNode actual = new Solution().removeNthFromEnd(input, 1);
@@ -98,9 +101,10 @@ public class SolutionTest {
 
         assertThat(actual, is(nullValue()));
     }
+
     @Test
-    @Ignore
-    public void remove2thFromEnd_listOf2Elements() {
+    @Disabled
+    void remove2thFromEnd_listOf2Elements() {
         ListNode input = new ListNode(1);
         input.next = new ListNode(2);
 
