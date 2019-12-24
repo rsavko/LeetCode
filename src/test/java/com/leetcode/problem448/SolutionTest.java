@@ -3,11 +3,10 @@ package com.leetcode.problem448;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 @DisplayName("Find All Numbers Disappeared in an Array")
 class SolutionTest {
