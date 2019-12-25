@@ -5,6 +5,20 @@ import java.util.Queue;
 
 public class Solution {
     public boolean isSymmetric(TreeNode root) {
+        return root == null || check(root.left, root.right);
+    }
+
+    private boolean check(TreeNode leftSub, TreeNode rightSub) {
+        if (leftSub == null && rightSub == null) {
+            return true;
+        } else if (leftSub != null && rightSub != null) {
+            return leftSub.val == rightSub.val && check(leftSub.left, rightSub.right)
+                    && check(leftSub.right, rightSub.left);
+        }
+        return false;
+    }
+
+    public boolean isSymmetric2(TreeNode root) {
         if (root == null) {
             return true;
         }
