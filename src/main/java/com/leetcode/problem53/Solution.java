@@ -14,7 +14,7 @@ public class Solution {
         if (low == high) {
             return a[low];
         } else {
-            int mid = (low + high) / 2;
+            int mid = low + (high - low) / 2;
             int maxLeft = findMax(a, low, mid);
             int maxRight = findMax(a, mid + 1, high);
             int crossSum = findCrossSum(a, low, mid, high);
