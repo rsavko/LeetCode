@@ -4,12 +4,7 @@ public class Solution {
     public boolean isPalindrome(int x) {
         if (x < 0) return false;
         if (x < 9)  return true;
-        int power = 0;
-        int temp = x;
-        while (temp / 10 > 0) {
-            power++;
-            temp /= 10;
-        }
+        int power = String.valueOf(x).length() - 1;
         while (power > 0) {
             int reminder = x % 10;
             int firstDigit = (int) (x / Math.pow(10, power));
