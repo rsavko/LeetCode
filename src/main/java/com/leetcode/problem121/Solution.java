@@ -2,7 +2,7 @@ package com.leetcode.problem121;
 
 
 public class Solution {
-    public int maxProfit2(int prices[]) {
+    public int maxProfit(int prices[]) {
         int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;
         for (int price : prices) {
@@ -14,7 +14,7 @@ public class Solution {
         return maxprofit;
     }
 
-    public int maxProfit(int[] prices) {
+    public int maxProfit2(int[] prices) {
         if (prices.length < 2) {
             return 0;
         }
