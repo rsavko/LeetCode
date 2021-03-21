@@ -35,8 +35,8 @@ class LinkedList<E> {
             head = head.next;
             changed = true;
         }
-        Node cur = head;
-        Node previous = cur;
+        Node<E> cur = head;
+        Node<E> previous = cur;
         while (cur != null) {
             if (cur.value.equals(e)) {
                 while (cur != null && cur.value.equals(e)) {
