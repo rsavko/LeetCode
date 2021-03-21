@@ -4,26 +4,26 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TailRecursionTest {
+class FactorialWithTailRecursionTest {
 
     @Test
-    void fib() {
-        long actualResult = TailRecursion.fib(4);
+    void factorial() {
+        long actualResult = FactorialWithTailRecursion.factorial(4);
         long expected = 24;
         assertEquals(expected, actualResult);
     }
 
     @Test
-    void fib_1() {
-        long actualResult = TailRecursion.fib(1);
+    void factorial_1() {
+        long actualResult = FactorialWithTailRecursion.factorial(1);
         long expected = 1;
         assertEquals(expected, actualResult);
     }
 
     @Test
-    void fib_0() {
+    void factorial_0() {
         assertThrows(IllegalArgumentException.class, () -> {
-            long actualResult = TailRecursion.fib(0);
+            long actualResult = FactorialWithTailRecursion.factorial(0);
         });
     }
 }

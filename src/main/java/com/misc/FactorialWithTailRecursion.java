@@ -1,7 +1,7 @@
 package com.misc;
 
-public class TailRecursion {
-    public static long fib(int n) {
+public class FactorialWithTailRecursion {
+    public static long factorial(int n) {
         if (n <= 0) {
             throw new IllegalArgumentException("Number should be positive.");
         }
